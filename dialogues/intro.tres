@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://dialogue.gd" type="Script" id=1]
+[ext_resource path="res://blocky characters/Faces/face_robot.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+avatar_texture = ExtResource( 2 )
+dialog_slides = [ "Welcome to the bazaar!", "I hope you came hungry, because there's a lot of free food.", "Just make sure to choose the right food.", "Ha ha ha ha ha" ]

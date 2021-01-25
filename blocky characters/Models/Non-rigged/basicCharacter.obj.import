@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/basicCharacter.obj-5b0f7a4c00fae4bd0b9d393154bd596a.mesh"
+
+[deps]
+
+files=[ "res://.import/basicCharacter.obj-5b0f7a4c00fae4bd0b9d393154bd596a.mesh" ]
+
+source_file="res://blocky characters/Models/Non-rigged/basicCharacter.obj"
+dest_files=[ "res://.import/basicCharacter.obj-5b0f7a4c00fae4bd0b9d393154bd596a.mesh", "res://.import/basicCharacter.obj-5b0f7a4c00fae4bd0b9d393154bd596a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

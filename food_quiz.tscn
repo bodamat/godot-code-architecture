@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://food.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fantasy town/stallRed.glb" type="PackedScene" id=2]
+[ext_resource path="res://blocky characters/Models/Non-rigged/glTF/advancedCharacter.gltf" type="PackedScene" id=3]
+[ext_resource path="res://blocky characters/Skins/Advanced/skin_adventurer.png" type="Texture" id=4]
+[ext_resource path="res://food_quiz.gd" type="Script" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 0.263497, 0.751638 )
+
+[node name="FoodQuiz" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50646, -0.0432394, -2.27146 )
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="stallRed" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.320565, 0, -2.22705, 0, 2.25, 0, 2.22705, 0, -0.320565, 0, 0, 0 )
+
+[node name="AdvanturerNPC" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0965926, 0, 0.0258819, 0, 0.1, 0, -0.0258819, 0, 0.0965926, -2.04346, 0.0499993, 0.34647 )
+
+[node name="Body1" parent="AdvanturerNPC" index="0"]
+material/0 = SubResource( 1 )
+
+[node name="Head1" parent="AdvanturerNPC" index="1"]
+material/0 = SubResource( 1 )
+
+[node name="ArmLeft1" parent="AdvanturerNPC" index="2"]
+material/0 = SubResource( 1 )
+
+[node name="ArmRight1" parent="AdvanturerNPC" index="3"]
+material/0 = SubResource( 1 )
+
+[node name="LegLeft1" parent="AdvanturerNPC" index="4"]
+material/0 = SubResource( 1 )
+
+[node name="LegRight1" parent="AdvanturerNPC" index="5"]
+material/0 = SubResource( 1 )
+
+[node name="DialogTrigger" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="DialogTrigger"]
+transform = Transform( 0.989369, 0, -0.145427, 0, 1, 0, 0.145427, 0, 0.989369, -0.243717, 0.556642, 1.54046 )
+shape = SubResource( 2 )
+
+[node name="Food" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.142473, 0, -0.989799, 0, 1, 0, 0.989799, 0, -0.142473, -0.631334, 1.25581, 0.00515127 )
+
+[node name="Food2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.142473, 0, -0.989799, 0, 1, 0, 0.989799, 0, -0.142473, 0.0213366, 1.25581, 0.0990977 )
+
+[node name="Food3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.142473, 0, -0.989799, 0, 1, 0, 0.989799, 0, -0.142473, 0.638056, 1.25581, 0.182781 )
+[connection signal="body_entered" from="DialogTrigger" to="." method="_on_DialogTrigger_body_entered"]
+
+[editable path="AdvanturerNPC"]

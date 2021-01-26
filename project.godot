@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Food",
 "language": "GDScript",
 "path": "res://food.gd"
+}, {
+"base": "Resource",
+"class": "RuntimeData",
+"language": "GDScript",
+"path": "res://runtime_state.gd"
 } ]
 _global_script_class_icons={
 "Dialogue": "",
-"Food": ""
+"Food": "",
+"RuntimeData": ""
 }
 
 [application]
@@ -29,11 +35,13 @@ _global_script_class_icons={
 config/name="Godot 3D: Code architecture course"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
+config/version=""
 
 [autoload]
 
 Debug="*res://debug.gd"
 GameEvents="*res://game_events.gd"
+Enums="*res://enums.gd"
 
 [input]
 

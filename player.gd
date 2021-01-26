@@ -6,6 +6,8 @@ export var _mouse_invert_y := false
 export var _camera_clamp_degree_x := 90.0
 export var _move_speed := 3.0
 
+export(Resource) var _runtime_data = _runtime_data as RuntimeData
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -13,7 +15,8 @@ func _input(event):
 	aim(event)
 
 func _physics_process(_delta):
-	movement()
+	if _runtime_data.current_gameplay_state == Enums.GameplayState.FREEWALK:
+		movement()
 
 
 func aim(event) -> void:

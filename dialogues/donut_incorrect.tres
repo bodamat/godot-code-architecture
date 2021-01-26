@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://dialogue.gd" type="Script" id=1]
+[ext_resource path="res://blocky characters/Faces/face_woman.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+avatar_texture = ExtResource( 2 )
+dialog_slides = [ "Do nut you're dead?", "Aww shoot. I'm bad this.", "Well anyways. There was rat poison in that donut." ]

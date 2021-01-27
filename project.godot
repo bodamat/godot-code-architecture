@@ -39,9 +39,9 @@ config/version=""
 
 [autoload]
 
-Debug="*res://debug.gd"
 GameEvents="*res://game_events.gd"
 Enums="*res://enums.gd"
+Debug="res://debug.gd"
 
 [input]
 

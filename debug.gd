@@ -3,7 +3,7 @@ extends Node
 func _input(event):
 	var mouse_click = event as InputEventMouseButton
 	
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
 	
 	if Input.is_action_just_pressed("debug_show_mouse"):
